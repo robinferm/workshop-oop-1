@@ -8,14 +8,14 @@ namespace _21
 {
     class Card
     {
-        enum suits
+        public enum CardSuit
         {
             clubs,
             diamonds,
             hearts,
             spades
         }
-        enum values
+        public enum CardValue
         {
             ace,
             two,
@@ -31,9 +31,13 @@ namespace _21
             queen,
             king
         }
-
-
-
-
+		CardSuit suit;
+		CardValue val;
+		
+		public Card(CardSuit suit, CardValue val)
+		{
+			this.suit = suit;
+			this.val = val;
+		}
     }
 }
