@@ -22,9 +22,9 @@ namespace _21
 					Console.WriteLine("Goodbye.");
 					break;
 				}
-				else if(input = "play")
+				else if(input == "play")
 				{
-					Game game = new Game();
+					Game game = new Game(3);
 					game.Play();
 				}
 			}

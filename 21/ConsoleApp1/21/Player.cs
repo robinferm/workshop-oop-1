@@ -12,6 +12,7 @@ namespace _21
 		{
 			this.userName = userName;
 			this.points = points;
+			this.hand = new List<Card>();
 		}
 		
 		public void AddCard(Card card)

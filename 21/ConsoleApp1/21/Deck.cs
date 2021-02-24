@@ -11,6 +11,7 @@ namespace _21
 		
 		public Deck()
 		{
+			this.cards = new List<Card>();
 			prng = new Random();
 			foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
 			{
@@ -19,11 +20,11 @@ namespace _21
 					cards.Add(new Card(suit, val));
 				}
 			}
-			
 		}
 		public Card Draw(){
-			return cards.RemoveAt(prng.Next(cards.Length));
+			Card rndCard = cards[prng.Next(cards.Count)];
+			cards.Remove(rndCard);
+			return rndCard;
 		}
-		
 	}
 }
